@@ -1,0 +1,16 @@
+{
+  "name": "smart_contract_dependencies",
+  "version": "0.1.0",
+  "main": "",
+  "dependencies": {
+    "ethers": "3.0.27",
+    "request": "2.88.0",
+    "web3": "1.0.0-beta.31"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Diego Martin Moreno",
+  "license": "Apache-2.0"
+}

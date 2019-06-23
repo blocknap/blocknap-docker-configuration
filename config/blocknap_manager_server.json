@@ -1,0 +1,28 @@
+{
+  "account": "ADDRESS_WALLET",
+  "port": 8887,
+  "private": "PRIVATE_KEY_WALLET",
+  "smart_contracts": [
+    {
+      "name":"BlockNap",
+      "sol":"BlockNap.sol",
+      "js":"BlockNap.js",
+      "listener":"logTest",
+      "oracle":"httpWeather",
+      "blockchain":"ethereum"
+    }
+  ],
+  "provider_config": "https://ropsten.infura.io/v3/KEY_PROJECT_INFURA",
+  "provider_web3":"https://ropsten.infura.io/v3/KEY_PROJECT_INFURA",
+  "provider":"json_rpc",
+  "network":"ropsten",
+  "gas": "0x3D0900",
+  "gasPrice": "0xEE6B2800",
+  "path_smart_contracts": "/app/blocknap_config/SmartContract/",
+  "path_js": "/app/blocknap_config/SmartContract/",
+  "db": "postgresql://root@localhost:26257/postgres?sslmode=disable",
+  "oracle_manager":"http://localhost:8888/oracle/v1/add/",
+  "oracle_enable":true,
+  "listen_manager":"http://localhost:8889/listen/v1/add/",
+  "listen_enable":true
+}

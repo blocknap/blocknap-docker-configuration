@@ -1,0 +1,21 @@
+	{
+	  "account": "ADDRESS_WALLET",
+	  "port": 8888,
+	  "private": "PRIVATE_KEY_WALLET",
+	  "oracleFile": [
+		{
+		  "name": "httpWeather",
+		  "file": "httpWeather.js",
+		  "cron": "*/50 * * * *",
+		  "api": "https://samples.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=b6907d289e10d714a6e88b30761fae22",
+		  "temp":200
+		}
+	  ],
+	  "provider_config": "https://ropsten.infura.io/v3/KEY_PROJECT_INFURA",
+	  "provider":"json_rpc",
+	  "network":"ropsten",
+	  "gas": 21000,
+	  "gasPrice": 1000000000,
+	  "path_oracles":"/app/blocknap_config/SmartContract/",
+	  "db": "postgresql://root@localhost:26257/postgres?sslmode=disable"
+	}

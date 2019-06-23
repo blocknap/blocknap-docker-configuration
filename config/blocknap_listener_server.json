@@ -1,0 +1,20 @@
+{
+  "account": "ADDRESS_WALLET",
+  "port": 8889,
+  "private": "PRIVATE_KEY_WALLET",
+  "listenFiles": [
+    {
+      "name": "logTest",
+      "file": "logTest.js"
+    }
+  ],
+
+  "provider_config": "https://ropsten.infura.io/v3/KEY_PROJECT_INFURA",
+  "provider":"json_rpc",
+  "network":"ropsten",  
+  "wss":"wss://ropsten.infura.io/ws/v3/KEY_PROJECT_INFURA",
+  "gas": "0x1e8480",
+  "gasPrice": "0x15",
+  "path_listen": "/app/blocknap_config/SmartContract/",
+  "db": "postgresql://root@localhost:26257/postgres?sslmode=disable"
+}

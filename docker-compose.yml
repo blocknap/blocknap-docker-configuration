@@ -1,0 +1,46 @@
+version: '3'
+services:
+  cockroach:
+    image: cockroachdb/cockroach:v19.1.1
+    container_name: cockroach
+    command: >-
+     start --insecure --listen-addr=localhost:26257 --http-addr=localhost:8080 
+    volumes:
+      - './testdb/roach1:/cockroach/cockroach-data' 
+    network_mode: host
+
+
+  blocknap-manager-server:
+    image: blocknap/blocknap-manager-server:0.1.1
+    container_name: blocknap-manager-server
+    depends_on:
+      - cockroach
+    command: >-
+     node index.js -f /app/blocknap_config/blocknap_manager_server.json
+    volumes:
+      - './config:/app/blocknap_config' 
+    network_mode: host
+
+
+  blocknap-oracle-server:
+    image: blocknap/blocknap-oracle-server:0.1.1
+    container_name: blocknap-oracle-server
+    depends_on:
+      - cockroach
+    command: >-
+     node index.js -f /app/blocknap_config/blocknap_oracle_server.json
+    volumes:
+      - './config:/app/blocknap_config' 
+    network_mode: host
+
+
+  blocknap-listener-server:
+    image: blocknap/blocknap-listener-server:0.1.1
+    container_name: blocknap-listener-server
+    depends_on:
+      - cockroach
+    network_mode: host
+    command: >-
+     node index.js -f /app/blocknap_config/blocknap_listener_server.json
+    volumes:
+      - './config:/app/blocknap_config' 
