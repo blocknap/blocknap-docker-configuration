@@ -8,8 +8,7 @@
       "sol":"BlockNap.sol",
       "js":"BlockNap.js",
       "listener":"logTest",
-      "oracle":"httpWeather",
-      "blockchain":"ethereum"
+      "oracle":"httpWeather"
     }
   ],
   "provider_config": "https://ropsten.infura.io/v3/KEY_PROJECT_INFURA",
