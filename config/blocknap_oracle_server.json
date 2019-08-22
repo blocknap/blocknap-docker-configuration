@@ -11,7 +11,7 @@
 		  "temp":200
 		}
 	  ],
-	  "provider_config": "https://ropsten.infura.io/v3/KEY_PROJECT_INFURA",
+	  "provider_config": "https://ropsten.infura.io/v3/PROJECT_ID_INFURA",
 	  "provider":"json_rpc",
 	  "network":"ropsten",
 	  "gas": 21000,
