@@ -1,0 +1,41 @@
+{
+	"info": {
+		"_postman_id": "bbfa841a-3e86-43af-bd31-2953e2e43316",
+		"name": "curso_blocknap",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create smart contract",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"date\":\"my date\",\r\n    \"issuer\":\"issuer\",\r\n    \"receiver\":\"receiver\",\r\n    \"subject\":\"subject\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8887/manager/v1/insert/BlockNap",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8887",
+					"path": [
+						"manager",
+						"v1",
+						"insert",
+						"BlockNap"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

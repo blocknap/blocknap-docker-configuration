@@ -9,7 +9,7 @@
 
  4.Go back to the upper folder and execute the command "docker-compose up -d cockroach", to startup the data base.
 
- 5.With a database tool as dbeaver connect to the database (cockroach) to create the tables that BlockNap will use.
+ 5.With a database tool as [Dbeaver](https://dbeaver.io/ "Dbeaver") connect to the database (cockroach) to create the tables that BlockNap will use.
 
 6.The data to connect the database if you execute the docker-compose in your laptop:
     - host:localhost
@@ -25,7 +25,6 @@
 8. Shutdown the database with Control + C in the console where is running the database.
 
 9. Go to the folder "config" and edit the file "blocknap_manager_server.json"
-
 
 10.Replace the address wallet, the private key and project id of infura with the real values and seve the file.
 
@@ -88,10 +87,10 @@
 	}
 ```
 
-11. Edit the file "blocknap_listener_server.json"
+13. Edit the file "blocknap_listener_server.json"
 
 
-12.Replace the address wallet, the private key and project id of infura with the real values and save the file.
+14.Replace the address wallet, the private key and project id of infura with the real values and save the file.
 
 ```json
 {
@@ -115,4 +114,31 @@
   "db": "postgresql://root@localhost:26257/postgres?sslmode=disable"
 }
 ```
+15. Go back to the upper folder and execute the command "docker-compose up", to startup blocknap. You will the in the console that four services are running. Example of log:
 
+```console
+
+```
+
+16. To test BlockNap you can execute this command in curl or import the the file "curso_blocknap.postman_collection.json" the [Postman](https://www.getpostman.com/ "Postman") software, and execute the resquest "create smart contract" inside the collection "curso_blocknap".  
+
+```
+curl -X POST \
+  http://localhost:8887/manager/v1/insert/BlockNap \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: c9b9e475-fe64-4192-8293-39ac800903eb' \
+  -H 'cache-control: no-cache' \
+  -d '{
+   "date":"my date",
+    "issuer":"issuer",
+    "receiver":"receiver",
+    "subject":"subject"
+}'
+```
+
+The result of the execution is the BlockNap Manager Server will create a smart contract in Ethereum, create and Oracle that call a service and a listener is create to listen all the events inside the smart contract. A example of log:
+
+```console
+ccc
+
+```
