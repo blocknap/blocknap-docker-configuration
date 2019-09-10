@@ -7,7 +7,7 @@
 
  3.Inside on folder "config" execute the command "npm install" to install all dependecies of nodejs files.
 
- 4.Go back to the upper folder and execute the command "docker-compose up -d cockroach", to startup the data base.
+ 4.Go back to the upper folder and execute the command "docker-compose up cockroach", to startup the data base.
 
  5.With a database tool as [Dbeaver](https://dbeaver.io/ "Dbeaver") connect to the database (cockroach) to create the tables that BlockNap will use.
 
